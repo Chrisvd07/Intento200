@@ -28,6 +28,11 @@ namespace Northwind.Infraestructure
                 conection.Execute(query, supplier);
             }
         }
+        public Supplier GetSupplierById(int supplierId)
+        {
+            var connection = _connectionFasctory.GetNewConnection();
+            return connection.QueryFirstOrDefault<Supplier>("SELECT * FROM Suppliers WHERE SupplierID = @SupplierID", new { SupplierID = supplierId });
+        }
         public void UpdateSupplier(Supplier supplier)
         {
             using (var connection = _connectionFasctory.GetNewConnection())

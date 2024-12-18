@@ -38,7 +38,7 @@ namespace Northwind
 
         private void button3_Click(object sender, EventArgs e)
         {
-          
+
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -62,7 +62,7 @@ namespace Northwind
 
         private void button5_Click(object sender, EventArgs e)
         {
-           
+
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -71,6 +71,11 @@ namespace Northwind
 
             textBoxCompanyName.Text = dataGridView1.Rows[e.RowIndex].Cells["CompanyName"].Value?.ToString();
             TextboxContactName.Text = dataGridView1.Rows[e.RowIndex].Cells["ContactName"].Value?.ToString();
+        }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+           
         }
     }
 }

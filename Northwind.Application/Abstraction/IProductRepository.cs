@@ -10,8 +10,9 @@ namespace Northwind.Application.Abstraction
     public interface IProductRepository
     {
         IEnumerable<Product> GetProducts();
-        void AddProduct(Product product);
+        void AddProduct(AddProductos product);
         void UpdateProduct(Product product);
-        void DeleteProduct(int Productid);
+        void DeleteProduct(int ProductID);
+        void AllPorductpp(Product product);
     }
 }

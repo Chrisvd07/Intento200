@@ -35,6 +35,7 @@
             TextboxContactName = new TextBox();
             button4 = new Button();
             button5 = new Button();
+            button3 = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -103,11 +104,22 @@
             button5.UseVisualStyleBackColor = true;
             button5.Click += button5_Click;
             // 
+            // button3
+            // 
+            button3.Location = new Point(120, 11);
+            button3.Name = "button3";
+            button3.Size = new Size(94, 29);
+            button3.TabIndex = 8;
+            button3.Text = "button3";
+            button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click_1;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(button3);
             Controls.Add(button5);
             Controls.Add(button4);
             Controls.Add(TextboxContactName);
@@ -131,5 +143,6 @@
         private TextBox TextboxContactName;
         private Button button4;
         private Button button5;
+        private Button button3;
     }
 }

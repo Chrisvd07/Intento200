@@ -28,20 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            dataGridView1 = new DataGridView();
             button1 = new Button();
+            dataGridView1 = new DataGridView();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
-            // 
-            // dataGridView1
-            // 
-            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(1, -2);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(662, 471);
-            dataGridView1.TabIndex = 0;
             // 
             // button1
             // 
@@ -51,25 +41,33 @@
             button1.TabIndex = 1;
             button1.Text = "Send";
             button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            button1.Click += button1_Click_1;
+            // 
+            // dataGridView1
+            // 
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(0, -3);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowHeadersWidth = 51;
+            dataGridView1.Size = new Size(667, 474);
+            dataGridView1.TabIndex = 2;
             // 
             // AddingProduct
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(779, 470);
-            Controls.Add(button1);
             Controls.Add(dataGridView1);
+            Controls.Add(button1);
             Name = "AddingProduct";
             Text = "AddingProduct";
-            Load += AddingProduct_Load;
+            Load += AddingProduct_Load_1;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
-
-        private DataGridView dataGridView1;
         private Button button1;
+        private DataGridView dataGridView1;
     }
 }

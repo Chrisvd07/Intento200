@@ -5,11 +5,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-
 namespace Northwind.Application.Abstraction
 {
-    public interface IOrderService
+    public interface IOrderRepository
     {
-        int CreateOrder(Order order, List<OrderDetail> orderDetails);
+        int InsertOrder(Order order);
+    }
+    public interface IOrderDetailRepository
+    {
+        void InsertOrderDetail(OrderDetail orderDetail);
     }
 }

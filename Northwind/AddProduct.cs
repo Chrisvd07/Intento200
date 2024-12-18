@@ -43,7 +43,7 @@ namespace Northwind
 
         private void button1_Click(object sender, EventArgs e)
         {
-            var produts = new Product
+            var produts = new AddProductos
             {
                 ProductName = textBox1.Text,
                 CategoryID = (int)comboBox2.SelectedValue,

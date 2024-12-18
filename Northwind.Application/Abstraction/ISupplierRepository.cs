@@ -12,6 +12,7 @@ namespace Northwind.Application.Abstraction
         public IEnumerable<Supplier>GetSuppliers();
         void AddSupplier(Supplier supplier);
         void RemoveSupplier(int supplier);
-        void UpdateSupplier(Supplier supplier);    
+        void UpdateSupplier(Supplier supplier);
+        
     }
 }

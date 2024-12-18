@@ -31,6 +31,17 @@ namespace Northwind
             serviceCollections.AddScoped<ISupplierRepository, SupplierRepository > ();
             serviceCollections.AddScoped<ICategoryRepositore, CategoryRepository>();
             serviceCollections.AddScoped<IProductRepository, ProductRepository>();
+            serviceCollections.AddScoped<ICustomerRepository, CustomerRepository>();
+            serviceCollections.AddScoped<IEmployessRepositore, EmployessRepository>();
+            serviceCollections.AddScoped<IOrderRepository, OrderRepository>();
+            serviceCollections.AddScoped<IOrderService, OrderService>();
+            serviceCollections.AddScoped<IOrderDetailRepository, OrderDetailRepository>();
+            serviceCollections.AddScoped<IShipViaRepository, ShipviaRepository>();
+
+
+
+
+
             serviceCollections.AddScoped<CategoryService>();
             serviceCollections.AddScoped<ProductService>();
             
@@ -44,8 +55,8 @@ namespace Northwind
             serviceCollections.AddTransient<AddCategories>();
             serviceCollections.AddTransient<AddSupplier>();
             serviceCollections.AddTransient<AddingProduct>();
-
-
+            serviceCollections.AddTransient<ordenar>();
+            serviceCollections.AddTransient<Form4>();
 
 
 
@@ -55,7 +66,9 @@ namespace Northwind
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-           System.Windows.Forms.Application.Run(ServiceProvider.GetRequiredService<AddingProduct>());
+            
+            System.Windows.Forms.Application.Run(ServiceProvider.GetRequiredService<ordenar>());
+            
             
         }
     }

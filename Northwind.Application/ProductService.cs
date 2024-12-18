@@ -20,5 +20,6 @@ namespace Northwind.Application
         {
             return _productRepository.GetProducts();
         }
+
     }
 }

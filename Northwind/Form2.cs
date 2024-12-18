@@ -28,8 +28,9 @@ namespace Northwind
 
         private void Form2_Load(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = _productService.GetAllProducts();
-            dataGridView1.DataSource = _productService.GetAllProducts();
+            var products = _productService.GetAllProducts();
+            dataGridView1.DataSource = products;
+
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -41,7 +42,7 @@ namespace Northwind
         {
             if (dataGridView1.SelectedRows.Count > 0)
             {
-                var Productid = (int)dataGridView1.SelectedRows[0].Cells["CategoryID"].Value;
+                var Productid = (int)dataGridView1.SelectedRows[0].Cells["ProductID"].Value;
                 var result = MessageBox.Show("Are you sure you want to delete this supplier?", "Confirm Delete", MessageBoxButtons.YesNo);
                 if (result == DialogResult.Yes)
                 {

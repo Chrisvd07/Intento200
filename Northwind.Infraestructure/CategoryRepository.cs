@@ -38,7 +38,7 @@ namespace Northwind.Infraestructure
                 connection.Execute(query, category);
             }
         }
-
+      
 
         public void RemoveCategory(int CategoryId)
         {

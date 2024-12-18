@@ -1,6 +1,6 @@
 ﻿namespace Northwind
 {
-    partial class Inicio
+    partial class Form4
     {
         /// <summary>
         /// Required designer variable.
@@ -28,18 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
+            dataGridView1 = new DataGridView();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
-            // Inicio
+            // dataGridView1
+            // 
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(0, -3);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowHeadersWidth = 51;
+            dataGridView1.Size = new Size(799, 449);
+            dataGridView1.TabIndex = 0;
+            // 
+            // Form4
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Name = "Inicio";
-            Text = "Inicio";
+            Controls.Add(dataGridView1);
+            Name = "Form4";
+            Text = "Form4";
+            Load += Form4_Load;
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
+
+        private DataGridView dataGridView1;
     }
 }

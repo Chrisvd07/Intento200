@@ -21,25 +21,28 @@ namespace Northwind.Infraestructure
         public IEnumerable<Product> GetProducts()
         {
             using var connection = _connectionFactory.GetNewConnection();
+
             string query = @"
-        SELECT 
-            p.ProductId,
-            p.ProductName,
-            c.CategoryName,
-            s.CompanyName,
-            p.UnitPrice
-        FROM Products p
-        INNER JOIN Categories c ON p.CategoryId = c.CategoryId
-        INNER JOIN Suppliers s ON p.SupplierId = s.SupplierId";
+            SELECT 
+        p.ProductId,
+        p.ProductName,
+        c.CategoryName,
+        s.CompanyName,
+        p.UnitPrice,
+        p.CategoryId,
+        p.SupplierId
+    FROM Products p
+    INNER JOIN Categories c ON p.CategoryId = c.CategoryId
+    INNER JOIN Suppliers s ON p.SupplierId = s.SupplierId";
 
             return connection.Query<Product>(query);
         }
-        public void AddProduct(Product product)
+        public void AddProduct(AddProductos productos)
         {
             using (var connection = _connectionFactory.GetNewConnection())
             {
                 var query = "INSERT INTO Products (ProductName, CategoryID,SupplierID,UnitPrice) VALUES (@ProductName,@CategoryID,@SupplierID,@UnitPrice)";
-                connection.Execute(query, product);
+                connection.Execute(query, productos);
             }
         }
         public void UpdateProduct(Product product)
@@ -51,15 +54,22 @@ namespace Northwind.Infraestructure
             }
 
         }
-        public void DeleteProduct(int Productid) 
+        public void DeleteProduct(int ProductID)
         {
-            using(var conenection = _connectionFactory.GetNewConnection())
+            using (var conenection = _connectionFactory.GetNewConnection())
             {
                 var query = "DELETE FROM Products WHERE ProductID = @ProductId";
-                conenection.Execute(query, new { ProductId = Productid });
+                conenection.Execute(query, new { ProductID = ProductID });
             }
         }
+        public void AllPorductpp(Product product)
+        {
 
-        
+            var connection = _connectionFactory.GetNewConnection();
+             connection.Query<Product>("SELECT * FROM Suppliers");
+        }
+
+
+
     }
 }

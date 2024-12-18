@@ -7,9 +7,8 @@ using System.Threading.Tasks;
 
 namespace Northwind.Application.Abstraction
 {
-    public interface IOrderepositori
+    public interface ICustomerRepository
     {
-        int CreateOrder(string customerId, string employeeId, string shipViaId);
-        void CreateOrderDetails(int orderId, List<Orderdetails> orderDetails);
+        public IEnumerable<Customers> GetCustomers();
     }
 }

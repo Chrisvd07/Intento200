@@ -1,40 +1,32 @@
 ﻿using Northwind.Application.Abstraction;
 using Northwind.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Northwind.Application.Abstraction;
+using Northwind.Models;
 
 namespace Northwind.Application
 {
     public class OrderService : IOrderService
     {
-        private readonly IOrderepositori orderepositori;
-        private readonly IComboBoxLoader _comboBoxLoader;
+        private readonly IOrderRepository _orderRepository;
+        private readonly IOrderDetailRepository _orderDetailRepository;
 
-        public OrderService(IOrderepositori orderepositori, IComboBoxLoader comboBoxLoader)
+        public OrderService(IOrderRepository orderRepository, IOrderDetailRepository orderDetailRepository)
         {
-            
-            this.orderepositori = orderepositori;
-            _comboBoxLoader = comboBoxLoader;
+            _orderRepository = orderRepository;
+            _orderDetailRepository = orderDetailRepository;
         }
 
-        public void LoadComboBoxes(ComboBox customerComboBox, ComboBox employeeComboBox, ComboBox shipViaComboBox)
+        public int CreateOrder(Order order, List<OrderDetail> orderDetails)
         {
-            // Cargar los datos de los combos desde la base de datos
-            _comboBoxLoader.LoadCustomers(customerComboBox);
-            _comboBoxLoader.LoadEmployees(employeeComboBox);
-            _comboBoxLoader.LoadShippers(shipViaComboBox);
-        }
+            int orderID = _orderRepository.InsertOrder(order);
 
-        public void CreateOrder(string customerId, string employeeId, string shipViaId, List<Orderdetails> orderDetails)
-        {
-            // Crear la orden
-            int orderId = orderepositori.CreateOrder(customerId, employeeId, shipViaId);
+            foreach (var detail in orderDetails)
+            {
+                detail.OrderID = orderID;
+                _orderDetailRepository.InsertOrderDetail(detail);
+            }
 
-            // Crear los detalles de la orden
-            orderepositori.CreateOrderDetails(orderId, orderDetails);
+            return orderID; 
         }
     }
 }

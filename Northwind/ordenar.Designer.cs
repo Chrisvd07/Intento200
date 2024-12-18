@@ -1,6 +1,6 @@
 ﻿namespace Northwind
 {
-    partial class Ordess
+    partial class ordenar
     {
         /// <summary>
         /// Required designer variable.
@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            button4 = new Button();
             button3 = new Button();
             button2 = new Button();
             button1 = new Button();
@@ -37,6 +38,7 @@
             label11 = new Label();
             dataGridView13 = new DataGridView();
             panel2 = new Panel();
+            label4 = new Label();
             dateTimePicker3 = new DateTimePicker();
             label1 = new Label();
             label2 = new Label();
@@ -56,75 +58,93 @@
             label10 = new Label();
             txt_City = new TextBox();
             txt_Address = new TextBox();
-            label4 = new Label();
+            label7 = new Label();
+            label8 = new Label();
+            label13 = new Label();
+            label14 = new Label();
+            label15 = new Label();
+            label16 = new Label();
+            label17 = new Label();
+            label18 = new Label();
             ((System.ComponentModel.ISupportInitialize)dataGridView13).BeginInit();
             panel2.SuspendLayout();
             SuspendLayout();
             // 
+            // button4
+            // 
+            button4.Location = new Point(699, 350);
+            button4.Name = "button4";
+            button4.Size = new Size(94, 29);
+            button4.TabIndex = 47;
+            button4.Text = "button4";
+            button4.UseVisualStyleBackColor = true;
+            button4.Click += button4_Click;
+            // 
             // button3
             // 
-            button3.Location = new Point(478, 477);
+            button3.Location = new Point(478, 449);
             button3.Name = "button3";
             button3.Size = new Size(94, 29);
-            button3.TabIndex = 36;
+            button3.TabIndex = 46;
             button3.Text = "Delete";
             button3.UseVisualStyleBackColor = true;
             // 
             // button2
             // 
-            button2.Location = new Point(596, 477);
+            button2.Location = new Point(596, 449);
             button2.Name = "button2";
             button2.Size = new Size(94, 29);
-            button2.TabIndex = 35;
+            button2.TabIndex = 45;
             button2.Text = "Add";
             button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // button1
             // 
-            button1.Location = new Point(359, 477);
+            button1.Location = new Point(359, 449);
             button1.Name = "button1";
             button1.Size = new Size(94, 29);
-            button1.TabIndex = 34;
+            button1.TabIndex = 44;
             button1.Text = "Save";
             button1.UseVisualStyleBackColor = true;
             // 
             // txt_ShipName
             // 
             txt_ShipName.Font = new Font("Rockwell Condensed", 9F);
-            txt_ShipName.Location = new Point(117, 434);
+            txt_ShipName.Location = new Point(120, 431);
             txt_ShipName.Margin = new Padding(3, 4, 3, 4);
             txt_ShipName.Name = "txt_ShipName";
             txt_ShipName.Size = new Size(166, 25);
-            txt_ShipName.TabIndex = 33;
+            txt_ShipName.TabIndex = 43;
             // 
             // ShipViaComboBox
             // 
             ShipViaComboBox.Font = new Font("Rockwell Condensed", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             ShipViaComboBox.FormattingEnabled = true;
-            ShipViaComboBox.Location = new Point(117, 475);
+            ShipViaComboBox.Location = new Point(120, 472);
             ShipViaComboBox.Margin = new Padding(3, 4, 3, 4);
             ShipViaComboBox.Name = "ShipViaComboBox";
             ShipViaComboBox.Size = new Size(166, 26);
-            ShipViaComboBox.TabIndex = 32;
+            ShipViaComboBox.TabIndex = 42;
             // 
             // label12
             // 
             label12.AutoSize = true;
             label12.Font = new Font("Lucida Fax", 10.2F, FontStyle.Bold);
-            label12.Location = new Point(14, 477);
+            label12.Location = new Point(17, 474);
             label12.Name = "label12";
             label12.Size = new Size(90, 20);
-            label12.TabIndex = 30;
+            label12.TabIndex = 40;
             label12.Text = "Ship Via:";
             // 
             // label11
             // 
             label11.AutoSize = true;
             label11.Font = new Font("Lucida Fax", 10.2F, FontStyle.Bold);
-            label11.Location = new Point(9, 434);
+            label11.Location = new Point(12, 431);
             label11.Name = "label11";
             label11.Size = new Size(111, 20);
-            label11.TabIndex = 31;
+            label11.TabIndex = 41;
             label11.Text = "Ship Name:";
             // 
             // dataGridView13
@@ -134,7 +154,7 @@
             dataGridView13.Name = "dataGridView13";
             dataGridView13.RowHeadersWidth = 51;
             dataGridView13.Size = new Size(550, 193);
-            dataGridView13.TabIndex = 29;
+            dataGridView13.TabIndex = 39;
             // 
             // panel2
             // 
@@ -162,8 +182,18 @@
             panel2.Location = new Point(0, 0);
             panel2.Margin = new Padding(3, 4, 3, 4);
             panel2.Name = "panel2";
-            panel2.Size = new Size(857, 224);
-            panel2.TabIndex = 28;
+            panel2.Size = new Size(800, 224);
+            panel2.TabIndex = 38;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Lucida Fax", 10.2F, FontStyle.Bold);
+            label4.Location = new Point(35, 132);
+            label4.Name = "label4";
+            label4.Size = new Size(143, 20);
+            label4.TabIndex = 13;
+            label4.Text = "Required Date ";
             // 
             // dateTimePicker3
             // 
@@ -349,21 +379,92 @@
             txt_Address.Size = new Size(143, 25);
             txt_Address.TabIndex = 6;
             // 
-            // label4
+            // label7
             // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Lucida Fax", 10.2F, FontStyle.Bold);
-            label4.Location = new Point(35, 132);
-            label4.Name = "label4";
-            label4.Size = new Size(143, 20);
-            label4.TabIndex = 13;
-            label4.Text = "Required Date ";
+            label7.AutoSize = true;
+            label7.Location = new Point(600, 242);
+            label7.Name = "label7";
+            label7.Size = new Size(50, 20);
+            label7.TabIndex = 48;
+            label7.Text = "label7";
             // 
-            // Ordess
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Location = new Point(652, 242);
+            label8.Name = "label8";
+            label8.Size = new Size(50, 20);
+            label8.TabIndex = 49;
+            label8.Text = "label8";
+            // 
+            // label13
+            // 
+            label13.AutoSize = true;
+            label13.Location = new Point(708, 239);
+            label13.Name = "label13";
+            label13.Size = new Size(58, 20);
+            label13.TabIndex = 50;
+            label13.Text = "label13";
+            // 
+            // label14
+            // 
+            label14.AutoSize = true;
+            label14.Location = new Point(601, 272);
+            label14.Name = "label14";
+            label14.Size = new Size(58, 20);
+            label14.TabIndex = 51;
+            label14.Text = "label14";
+            // 
+            // label15
+            // 
+            label15.AutoSize = true;
+            label15.Location = new Point(669, 274);
+            label15.Name = "label15";
+            label15.Size = new Size(58, 20);
+            label15.TabIndex = 52;
+            label15.Text = "label15";
+            // 
+            // label16
+            // 
+            label16.AutoSize = true;
+            label16.Location = new Point(737, 268);
+            label16.Name = "label16";
+            label16.Size = new Size(58, 20);
+            label16.TabIndex = 53;
+            label16.Text = "label16";
+            // 
+            // label17
+            // 
+            label17.AutoSize = true;
+            label17.Location = new Point(605, 307);
+            label17.Name = "label17";
+            label17.Size = new Size(58, 20);
+            label17.TabIndex = 54;
+            label17.Text = "label17";
+            // 
+            // label18
+            // 
+            label18.AutoSize = true;
+            label18.Location = new Point(666, 312);
+            label18.Name = "label18";
+            label18.Size = new Size(58, 20);
+            label18.TabIndex = 55;
+            label18.Text = "label18";
+            // 
+            // ordenar
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(857, 514);
+            ClientSize = new Size(800, 515);
+            Controls.Add(label18);
+            Controls.Add(label17);
+            Controls.Add(label16);
+            Controls.Add(label15);
+            Controls.Add(label14);
+            Controls.Add(label13);
+            Controls.Add(label8);
+            Controls.Add(label7);
+            Controls.Add(button4);
             Controls.Add(button3);
             Controls.Add(button2);
             Controls.Add(button1);
@@ -373,8 +474,9 @@
             Controls.Add(label11);
             Controls.Add(dataGridView13);
             Controls.Add(panel2);
-            Name = "Ordess";
-            Text = "Ordess";
+            Name = "ordenar";
+            Text = "_ordenar";
+            Load += ordenar_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView13).EndInit();
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
@@ -384,6 +486,7 @@
 
         #endregion
 
+        private Button button4;
         private Button button3;
         private Button button2;
         private Button button1;
@@ -413,5 +516,13 @@
         private Label label10;
         public TextBox txt_City;
         public TextBox txt_Address;
+        private Label label7;
+        private Label label8;
+        private Label label13;
+        private Label label14;
+        private Label label15;
+        private Label label16;
+        private Label label17;
+        private Label label18;
     }
 }
